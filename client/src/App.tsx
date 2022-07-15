@@ -15,9 +15,8 @@ function App() {
   return (
     <BrowserRouter>
         <div className="app">
-            <div className="container m-auto">
+            <div className="container m-auto px-3 md:px-0">
                 <Header/>
-
                 <div className="w-full flex justify-center mt-6">
                     <RouterView/>
                 </div>

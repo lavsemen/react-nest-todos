@@ -21,7 +21,7 @@ function Header() {
                 Logo
             </div>
             <ul className="flex items-center">
-                {links.map(link => <li key={link.url} className="mr-7">
+                {links.map(link => <li key={link.url} className="mr-7 last:mr-0">
                     <NavLink className={({isActive}: {isActive: boolean}) => isActive? 'text-blue-500': undefined}
                              to={link.url}>
                         {link.text}

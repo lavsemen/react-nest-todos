@@ -14,7 +14,7 @@ export class TodosService {
     }
 
     async getAllTodos() {
-        return await this.todoRepository.findAll()
+        return await this.todoRepository.findAll({order: [['id', 'DESC']]})
     }
 
     async getTodoById(id: number) {
