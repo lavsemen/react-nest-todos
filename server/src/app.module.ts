@@ -2,6 +2,7 @@ import {Module} from "@nestjs/common";
 import { SequelizeModule } from '@nestjs/sequelize';
 import { TodosModule } from './todos/todos.module';
 import {TodosModel} from "./todos/todos.model";
+import {ParserModule} from "./parse/parser.module";
 
 
 @Module({
@@ -19,6 +20,7 @@ import {TodosModel} from "./todos/todos.model";
             autoLoadModels: true
         }),
         TodosModule,
+        ParserModule
     ]
 })
 export class AppModule {}
