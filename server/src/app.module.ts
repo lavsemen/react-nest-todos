@@ -2,7 +2,8 @@ import {Module} from "@nestjs/common";
 import { SequelizeModule } from '@nestjs/sequelize';
 import { TodosModule } from './todos/todos.module';
 import {TodosModel} from "./todos/todos.model";
-import {ParserModule} from "./parse/parser.module";
+import {ParserModule} from "./parser/parser.module";
+import {ParserModel} from "./parser/parser.model";
 
 
 @Module({
@@ -16,7 +17,7 @@ import {ParserModule} from "./parse/parser.module";
             username: 'postgres',
             password: 'root',
             database: 'todo',
-            models: [TodosModel],
+            models: [TodosModel, ParserModel],
             autoLoadModels: true
         }),
         TodosModule,
